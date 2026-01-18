@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 h-screen">
+    <section>
+      <!-- Navbar -->
+      <nav
+        class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow"
+      >
+        <h1 class="text-2xl font-bold">My To‑Do App</h1>
+        <ul class="flex gap-6 text-sm">
+          <li class="cursor-pointer hover:underline">Dashboard</li>
+          <li class="cursor-pointer hover:underline">Tasks</li>
+          <li class="cursor-pointer hover:underline">Settings</li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="flex h-[calc(100vh-72px)]">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r p-6">
+        <h2 class="font-semibold mb-4">Categories</h2>
+        <ul class="space-y-2 text-sm">
+          <li class="text-blue-600 font-medium">All Tasks</li>
+          <li>Work</li>
+          <li>Personal</li>
+          <li>Shopping</li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="flex-1 p-8">
+        <h2 class="text-xl font-semibold mb-4">Today's Tasks</h2>
+
+        <!-- Input -->
+        <div class="flex gap-2 mb-6">
+          <input
+            id="taskInput"
+            type="text"
+            placeholder="Add a new task"
+            class="flex-1 px-4 py-2 border rounded"
+          />
+          <button
+            onclick="addTask()"
+            class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Add
+          </button>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList" class="space-y-3"></ul>
+      </main>
+    </div>
+  </body>
+</html>
